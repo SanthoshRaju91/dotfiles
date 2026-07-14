@@ -11,3 +11,11 @@ close_tab = "prefix+ampersand"
 workspace_picker = "prefix+w"
 goto             = "prefix+g"
 copy_mode  = "prefix+y"  # herdr's copy-mode entry key; copy-mode's own internal keys (v/space select, y/Enter copy, q/Esc cancel) aren't configurable
+new_workspace = "prefix+shift+n"
+rename_workspace = "prefix+shift+w"
+navigate_workspace_up = "up"
+navigate_workspace_down = "down"
+
+[theme]
+name = "tokyo-night"
+auto_switch = false
