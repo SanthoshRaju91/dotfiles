@@ -30,13 +30,15 @@ in
     '';
     shellAliases = {
       ".." = "cd ..";
-      ga = "git add .";
+      ga = "git add";
       gs = "git status";
       gc = "git commit";
       gch = "git checkout";
       gph = "git push";
       pull = "git pull";
       gri = "git rebase -i";
+      gd = "git diff";
+      gf = "git fetch --all";
       gm = "git switch main";
       gb = "git branch";
       cc = "claude --dangerously-skip-permissions";
