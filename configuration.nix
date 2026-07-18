@@ -42,6 +42,7 @@
       "nvm"
       "sops"
       "gh"
+      "watch"
     ];
     casks = [
       "wezterm"
