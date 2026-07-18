@@ -76,6 +76,7 @@
 - Never add the agent as a co-author.
 - Keep commits logically grouped.
 - Avoid mixing refactoring with functional changes unless necessary.
+- Never run `git add` or `git commit` automatically. Always present the changes and wait for the user to review and commit manually.
 
 ## Refactoring
 

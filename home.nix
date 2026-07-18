@@ -27,6 +27,24 @@ in
     syntaxHighlighting.enable = true;  # commands turn green when valid
     initContent = ''
       bindkey '^f' autosuggest-accept
+
+      # Source nvm installed by Homebrew
+      export NVM_DIR="$HOME/.nvm"
+
+      # Dynamically find the nvm installation path via brew
+      if [ -s "$(brew --prefix nvm)/nvm.sh" ]; then
+        . "$(brew --prefix nvm)/nvm.sh"
+      fi
+
+      # Optional: Load bash completion if desired
+      if [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ]; then
+        . "$(brew --prefix nvm)/etc/bash_completion.d/nvm"
+      fi
+
+      # Ensure Homebrew completions are in the search path
+      if [ -d "$(brew --prefix)/share/zsh/site-functions" ]; then
+        fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+      fi
     '';
     shellAliases = {
       ".." = "cd ..";
@@ -41,8 +59,10 @@ in
       gf = "git fetch --all";
       gm = "git switch main";
       gb = "git branch";
+      grc = "git rebase --continue";
       cc = "claude --dangerously-skip-permissions";
       co = "codex --full-auto";
+      k = "kubectl";
     };
   };
 

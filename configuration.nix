@@ -39,6 +39,9 @@
       "herdr"
       "opencode"
       "uv"
+      "nvm"
+      "sops"
+      "gh"
     ];
     casks = [
       "wezterm"
